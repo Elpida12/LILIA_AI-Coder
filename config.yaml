@@ -1,0 +1,28 @@
+llm:
+  base_url: "http://127.0.0.1:8080/v1"
+  model: "qwen3"
+  api_key: "no-key-needed"
+  context_size: 40000
+  reasoning_format: "deepseek"
+  temperature: 0.3
+  max_tokens: 16384
+  cache_dir: "./logs/llm_cache"
+
+agents:
+  max_iterations: 20
+  thinking_budget: 4096
+
+workspace:
+  root: "./workspace"
+  logs_dir: "./logs"
+
+logging:
+  level: "INFO"
+  log_to_terminal: true
+
+features:
+  git_checkpoints: true
+  venv_auto: true
+  max_task_retries: 5
+  stop_on_first_failure: false
+  concurrent_llm_limit: 3
